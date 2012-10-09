@@ -74,16 +74,21 @@
 \RequirePackage{listings}
 \RequirePackage{graphicx}
 \RequirePackage{fancyhdr}
-\RequirePackage[margin=1in]{geometry}
 \RequirePackage{color}
+
+\RequirePackage[hmargin=1in,head=25pt,foot=1in]{geometry}
+
+\usepackage{tgcursor}
+\usepackage[T1]{fontenc}
 
 \definecolor{lightgray}{rgb}{0.25, 0.25, 0.25}
 \definecolor{gray}{rgb}{0.5, 0.5, 0.5}
 \definecolor{darkgray}{rgb}{0.75, 0.75, 0.75}
 \lstset {
-  basicstyle=\footnotesize,
+  basicstyle=\footnotesize\ttfamily,
+  columns=fixed,
   numbers=left,
-  numberstyle=\tiny\color{gray},
+  numberstyle=\tiny\color{darkgray},
   frame=single,
   tabsize=4,
   breaklines=true,
@@ -181,6 +186,8 @@
 \pagestyle{fancyplain}
 \fancyhf{}
 \cfoot{\thepage}
+
+\setlength{\headheight}{60pt}
 
 \rhead{\fancyplain{\ifhmcpset@header
     \hmcpset@name \; $\langle$\hmcpset@uni$\rangle$ \\
