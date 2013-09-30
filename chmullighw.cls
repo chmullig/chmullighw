@@ -85,7 +85,7 @@
 \definecolor{gray}{rgb}{0.5, 0.5, 0.5}
 \definecolor{darkgray}{rgb}{0.75, 0.75, 0.75}
 \lstset {
-  basicstyle=\footnotesize\ttfamily,
+  basicstyle=\scriptsize\ttfamily,
   columns=fixed,
   numbers=left,
   numberstyle=\tiny\color{darkgray},
@@ -93,6 +93,7 @@
   tabsize=4,
   breaklines=true,
   breakatwhitespace=true,
+  showstringspaces=false, 
   title=\lstname
 }
 %% boxed minipage for boxed problem environment
@@ -202,3 +203,9 @@
 \else
   \renewcommand{\headrulewidth}{0pt} %"plain" header style
 \fi
+
+% BigO notation
+\newcommand{\BigO}[1]{\ensuremath{\operatorname{O}\bigl(#1\bigr)}}
+\newcommand{\BigTheta}[1]{\ensuremath{\operatorname{\Theta}\bigl(#1\bigr)}}
+\newcommand{\BigOmega}[1]{\ensuremath{\operatorname{\Omega}\bigl(#1\bigr)}}
+
